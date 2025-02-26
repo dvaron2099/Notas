@@ -1,0 +1,44 @@
+Array si a data structures used to store homogeneous elementos at contiguous locations.
+Size of an Array must be provided before storing data. Let the Size of a Array be n.
+If the Array is sorted, what is the time complexity of a Binary Search operstion?
+Pick one option
+
+1. O(n)
+2. O(1)
+3. O(log n) correcta
+4. O(n/2)
+--------------------------------------------------------------------------------------------------
+Pregunta:
+Un array es una estructura de datos utilizada para almacenar elementos
+homogéneos en ubicaciones contiguas.
+El tamaño de un array debe ser proporcionado antes de almacenar los datos.
+Supongamos que el tamaño de un array es n y el array está ordenado.
+¿Cuál es la complejidad temporal de una operación de búsqueda binaria?
+Opciones:
+1.	O(n)
+2.	O(1)
+3.	O(log n) correcta
+4.	O(n/2)
+Respuesta correcta:
+O(log n)
+Explicación:
+La búsqueda binaria es un algoritmo eficiente que se utiliza para encontrar un
+elemento en un array ordenado. Funciona dividiendo repetidamente el array en dos
+mitades y comparando el valor objetivo con el valor medio de la mitad actual.
+
+•	O(n): Esto se aplica a una búsqueda lineal, no a la búsqueda binaria.
+La búsqueda lineal recorrería cada elemento del array de manera secuencial.
+
+•	O(1): Esto implicaría que la operación se realiza en tiempo constante,
+lo cual no es el caso de la búsqueda binaria, ya que requiere dividir el array
+en mitades repetidamente.
+
+•	O(log n): Este es el tiempo de complejidad correcto para la búsqueda binaria.
+En cada paso de la búsqueda binaria, el tamaño del array se reduce a la mitad,
+lo que lleva a una complejidad logarítmica en relación con el tamaño del array.
+
+•	O(n/2): Esta opción no es correcta porque la búsqueda binaria no recorre la
+mitad de los elementos del array en términos de tiempo, sino que realiza
+divisiones logarítmicas.
+
+Por lo tanto, la complejidad temporal de la búsqueda binaria es O(log n).

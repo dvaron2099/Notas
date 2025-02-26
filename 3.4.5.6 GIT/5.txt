@@ -1,0 +1,37 @@
+Por lo tanto, la respuesta correcta es git checkout master, ya que es el comando utilizado para cambiar de rama en Git.
+How do you create a local branch, if tour HEAD is pointing to máster?
+Git branch - c ...
+Git branch - - new ...
+Git checkout -b... - correcta
+None of the above
+
+Única respuesta
+Pregunta:
+¿Cómo creas una rama local si tu HEAD está apuntando a master?
+1.	Git branch -c ...
+2.	Git branch --new ...
+3.	Git checkout -b ... - correcta
+4.	None of the above
+
+Respuesta correcta:
+Git checkout -b ...
+Explicación:
+
+•	Git branch -c ...:
+Este comando no es válido en Git. No existe una opción -c para el comando git
+branch. Para crear una rama, se utiliza el comando git branch sin esta opción.
+
+•	Git branch --new ...:
+Tampoco es correcto. git branch se usa para crear ramas, pero no lleva una
+opción --new. La forma correcta de crear una nueva rama sería simplemente git
+branch <nombre-de-la-rama>.
+
+•	Git checkout -b ...:
+Este es el comando correcto para crear una nueva rama y cambiarte a ella en un
+solo paso. El -b indica que Git debe crear la nueva rama y luego cambiar tu
+HEAD a esa rama. Si estás en la rama master, este comando crea una nueva rama
+y te cambia a ella automáticamente.
+
+•	None of the above:
+Esta opción es incorrecta porque el comando correcto git checkout -b ...
+está listado entre las opciones.

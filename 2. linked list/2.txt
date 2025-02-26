@@ -1,0 +1,53 @@
+How is a Array diferente from a Linked list?
+Check all the answer you think are true
+
+Pick one or more options
+
+1. The Size of an array is fixed and in a Linked list you can continúe adding nodes - correcta
+2. In an Array random Acces is not allowed and it is a Linked list
+3. Inserting elements in a linked is cheap, but in arrays it might be expensive - correcta
+4. Deleting an element in an arrays is cheap because you can index the node and delete its contents
+------------------------------------------------------------------------------
+
+Pregunta:
+¿Cuál es la diferencia entre un Array y una Linked List?
+Marca las opciones que consideres correctas.
+1.	El tamaño de un array es fijo y en una linked list puedes continuar agregando nodos. - correcta
+2.	En un array no se permite el acceso aleatorio, pero sí en una linked list.
+3.	Insertar elementos en una linked list es barato, pero en arrays puede ser caro. - correcta
+4.	Eliminar un elemento en un array es barato porque puedes indexar el nodo y eliminar su contenido.
+
+Respuestas correctas:
+1.	El tamaño de un array es fijo y en una linked list puedes continuar agregando nodos.
+o	Correcta.
+Los arrays tienen un tamaño fijo cuando se crean (a menos que se use una
+estructura dinámica como un array redimensionable), mientras que en una lista
+enlazada, puedes seguir agregando nodos dinámicamente sin necesidad de
+redefinir su tamaño.
+
+2.	En un array no se permite el acceso aleatorio, pero sí en una linked list.
+o	Incorrecta.
+El acceso aleatorio sí está permitido en un array. Esto significa que
+puedes acceder directamente a cualquier elemento en el array usando su índice.
+En una linked list, el acceso a los elementos no es aleatorio, ya que necesitas
+recorrer la lista de un nodo a otro para encontrar un elemento específico.
+
+3.	Insertar elementos en una linked list es barato, pero en arrays puede ser caro.
+o	Correcta. En una lista enlazada, insertar elementos es eficiente (barato)
+porque solo implica modificar los punteros de los nodos adyacentes. En un array,
+la inserción de un nuevo elemento puede ser costosa, especialmente si el array
+es grande y necesitas mover elementos para hacer espacio para el nuevo elemento.
+
+4.	Eliminar un elemento en un array es barato porque puedes indexar el nodo
+y eliminar su contenido.
+o	Incorrecta. Eliminar un elemento en un array no siempre es barato.
+Si eliminas un elemento en el medio o al principio del array, todos los
+elementos posteriores deben moverse para llenar el espacio vacío. Esto puede
+hacer que la eliminación sea costosa en términos de tiempo. En una linked list,
+la eliminación de un nodo es más eficiente si ya tienes acceso al nodo a eliminar,
+ya que solo necesitas ajustar los punteros de los nodos adyacentes.
+Resumen de las respuestas correctas:
+•
+1.	El tamaño de un array es fijo y en una linked list puedes continuar agregando nodos.
+•
+3.	Insertar elementos en una linked list es barato, pero en arrays puede ser caro.

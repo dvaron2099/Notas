@@ -1,0 +1,53 @@
+What is the difference between the HTTP GET Method and the HTTP POST method?
+
+1. GET sends the payload as part of the URL, while POST doesnt support  sending payloads.
+
+2. POST sends the payload as part of the URL, while GET sends the payload through the request body.
+
+3. POST required server-side authentication, while GET does not.
+
+4. GET sends the payload as part of the URL, while POST sends the payload through the request body. - correcta
+------------------------------------------------------------------------------------------
+¿Cuál es la diferencia entre el método HTTP GET y el método HTTP POST?
+1.	GET envía la carga útil como parte de la URL, mientras que POST no admite
+el envío de cargas útiles.
+
+2.	POST envía la carga útil como parte de la URL, mientras que GET envía la
+carga útil a través del cuerpo de la solicitud.
+
+3.	POST requiere autenticación del lado del servidor, mientras que GET no.
+
+4.	GET envía la carga útil como parte de la URL, mientras que POST envía la
+carga útil a través del cuerpo de la solicitud. - correcta
+------------------------------------------------------------------------------------------
+Respuesta correcta:
+GET envía la carga útil como parte de la URL, mientras que POST envía la carga útil a través del cuerpo de la solicitud.
+Explicación:
+
+•	GET:
+El método GET es utilizado para obtener datos del servidor. La carga útil de una
+solicitud GET generalmente se pasa como parámetros en la URL. Por ejemplo:
+GET /search?q=example. La URL contiene la información que se envía al servidor,
+y la longitud de los datos que se pueden enviar está limitada por la longitud máxima de la URL.
+
+•	POST:
+El método POST se utiliza para enviar datos al servidor. En lugar de incluir la
+carga útil en la URL, los datos se envían en el cuerpo de la solicitud. Esto permite
+enviar grandes cantidades de datos (como formularios, archivos, etc.) sin las
+restricciones de longitud de la URL.
+------------------------------------------------------------------------------------------
+Por qué las otras opciones no son correctas:
+1.	GET envía la carga útil como parte de la URL, mientras que POST no admite el envío de cargas útiles.
+Esto es incorrecto porque POST sí admite el envío de cargas útiles. De hecho,
+es el método recomendado para enviar datos más grandes, ya que la carga útil se
+envía en el cuerpo de la solicitud, no en la URL.
+
+2.	POST envía la carga útil como parte de la URL, mientras que GET envía la carga útil a través del cuerpo de la solicitud.
+Esto es incorrecto porque GET envía la carga útil a través de la URL, no en el
+cuerpo de la solicitud. Es POST el que envía la carga útil a través del cuerpo
+de la solicitud.
+
+3.	POST requiere autenticación del lado del servidor, mientras que GET no.
+Esto no es correcto. La necesidad de autenticación no depende del método HTTP,
+sino de la configuración del servidor y de los recursos a los que se está accediendo.
+Tanto GET como POST pueden requerir autenticación dependiendo de cómo esté configurada la seguridad en el servidor.

@@ -1,0 +1,109 @@
+Una **linked list** (lista enlazada) es una estructura de datos lineal que consiste en una secuencia de nodos, donde cada nodo contiene dos partes: **un valor (dato)** y **un puntero (referencia)** al siguiente nodo de la lista. A diferencia de los arrays (arreglos), los elementos en una lista enlazada no están almacenados en ubicaciones contiguas en memoria, lo que permite un tamaño dinámico para la estructura.
+
+### Características de una lista enlazada:
+- **Cada nodo tiene un valor (dato)**.
+- **Cada nodo tiene un puntero (o referencia)** que apunta al siguiente nodo en la lista.
+- El último nodo apunta a `None`, indicando el final de la lista.
+
+### Tipos de listas enlazadas:
+- **Lista enlazada simple**: Cada nodo tiene un solo puntero que apunta al siguiente nodo.
+- **Lista doblemente enlazada**: Cada nodo tiene dos punteros: uno al siguiente nodo y otro al nodo anterior.
+- **Lista circular**: El último nodo de la lista apunta de nuevo al primer nodo.
+
+### Ejemplo básico de una lista enlazada simple en Python:
+
+```python
+# Definimos una clase para el Nodo de la lista
+class Node:
+    def __init__(self, data):
+        self.data = data  # Contiene el valor del nodo
+        self.next = None  # Puntero al siguiente nodo, inicialmente es None
+
+# Definimos la clase LinkedList
+class LinkedList:
+    def __init__(self):
+        self.head = None  # Inicialmente la lista está vacía
+
+    # Método para insertar un nuevo nodo al final de la lista
+    def append(self, data):
+        new_node = Node(data)  # Creamos un nuevo nodo
+        if not self.head:
+            self.head = new_node  # Si la lista está vacía, el nuevo nodo es la cabeza
+            return
+        last = self.head
+        while last.next:  # Recorremos hasta el último nodo
+            last = last.next
+        last.next = new_node  # Asignamos el nuevo nodo al final de la lista
+
+    # Método para imprimir los elementos de la lista
+    def print_list(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+    # Método para eliminar un nodo específico
+    def delete_node(self, key):
+        current = self.head
+        if current and current.data == key:  # Si el nodo a eliminar es el primero
+            self.head = current.next
+            current = None
+            return
+        prev = None
+        while current and current.data != key:  # Buscamos el nodo a eliminar
+            prev = current
+            current = current.next
+        if current is None:  # Si el nodo no está presente
+            return
+        prev.next = current.next  # Eliminamos el nodo
+        current = None
+
+# Creamos una lista enlazada y probamos algunos métodos
+llist = LinkedList()
+llist.append(1)
+llist.append(2)
+llist.append(3)
+llist.append(4)
+
+print("Lista original:")
+llist.print_list()
+
+llist.delete_node(3)  # Eliminamos el nodo con valor 3
+print("\nLista después de eliminar el nodo con valor 3:")
+llist.print_list()
+```
+
+### Explicación del código:
+1. **Clase `Node`**:
+   - Esta clase representa un nodo en la lista enlazada. Tiene dos atributos:
+     - **`data`**: el valor que almacenará el nodo.
+     - **`next`**: el puntero que apunta al siguiente nodo de la lista (por defecto es `None`).
+
+2. **Clase `LinkedList`**:
+   - Esta clase representa la lista enlazada en sí. Tiene un atributo:
+     - **`head`**: que es el primer nodo de la lista.
+   - Métodos de la lista:
+     - **`append(data)`**: agrega un nuevo nodo al final de la lista.
+     - **`print_list()`**: recorre la lista e imprime todos los valores de los nodos.
+     - **`delete_node(key)`**: elimina el primer nodo que contiene el valor `key`.
+
+### Ejecución del código:
+1. Primero, agregamos nodos a la lista (1, 2, 3, 4).
+2. Imprimimos la lista, que muestra los elementos de la lista enlazada en el formato `1 -> 2 -> 3 -> 4 -> None`.
+3. Luego, eliminamos el nodo con el valor 3.
+4. Finalmente, imprimimos la lista nuevamente, mostrando `1 -> 2 -> 4 -> None`, lo que indica que el nodo con valor 3 ha sido eliminado.
+
+### ¿Por qué usar listas enlazadas?
+- **Ventajas**:
+  - **Inserciones y eliminaciones rápidas** en cualquier parte de la lista (O(1) si tienes el puntero al nodo) sin necesidad de mover otros elementos, a diferencia de los arrays que requieren desplazamiento de los elementos.
+  - Las listas enlazadas tienen un tamaño **dinámico**; no es necesario predefinir el tamaño como en los arrays.
+
+- **Desventajas**:
+  - **Acceso lento** a los elementos (O(n)) ya que debes recorrer la lista desde el principio hasta llegar al nodo deseado, en comparación con el acceso rápido (O(1)) en los arrays mediante índices.
+  - **Mayor uso de memoria** debido a los punteros adicionales que cada nodo necesita.
+
+### Conclusión:
+Las listas enlazadas son útiles en escenarios donde las inserciones y eliminaciones frecuentes son necesarias, pero no se requiere acceso rápido a los elementos. Si necesitas realizar muchas búsquedas o acceder a los elementos por índice, un array podría ser una mejor opción debido a su eficiencia en el acceso aleatorio.
+
+Si tienes más dudas o necesitas más ejemplos, ¡no dudes en preguntar!

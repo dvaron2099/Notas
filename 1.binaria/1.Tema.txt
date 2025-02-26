@@ -1,0 +1,96 @@
+Si te preguntaran más sobre esta pregunta en una entrevista técnica,
+es probable que te hagan preguntas relacionadas con **algoritmos de búsqueda**,
+**estructuras de datos**, y **complejidad temporal**. Aquí te explico los temas
+clave que se tocan en esta área:
+
+### 1. **Búsqueda Binaria**:
+   - **Descripción**: Es un algoritmo de búsqueda eficiente que solo funciona
+    en arrays o listas ordenadas. La idea es dividir repetidamente el array en
+    mitades y comparar el valor objetivo con el valor medio de la lista.
+    Esto permite reducir el número de elementos a revisar de manera logarítmica.
+   - **Complejidad**: Como se mencionó, su complejidad es **O(log n)**,
+    lo que significa que el tiempo de ejecución crece muy lentamente a medida
+    que aumenta el tamaño del array. Esto es mucho más eficiente que la búsqueda
+    lineal, que tiene una complejidad de **O(n)**.
+   - **Condiciones**: Solo funciona en estructuras de datos ordenadas.
+    Si los datos no están ordenados, primero necesitarías ordenarlos,
+    lo que podría aumentar el costo si usas un algoritmo de ordenamiento
+    como **quicksort** (**O(n log n)**).
+   - **Caso Base y Recursividad**: Puedes implementar la búsqueda binaria de
+   manera recursiva o iterativa. Ambos enfoques tienen el mismo rendimiento en
+   términos de complejidad.
+
+### 2. **Búsqueda Lineal**:
+   - **Descripción**: Es un algoritmo más simple que no requiere que los
+   datos estén ordenados. Consiste en recorrer todo el array de forma
+   secuencial para encontrar el valor objetivo.
+   - **Complejidad**: Su complejidad es **O(n)**, lo que significa que el tiempo
+   de ejecución aumenta linealmente con el tamaño del array. Aunque más simple,
+   es menos eficiente que la búsqueda binaria en grandes conjuntos de datos.
+
+### 3. **Estructuras de Datos**:
+   - **Arrays (Arreglos)**:
+     - Los **arrays** son estructuras de datos que almacenan elementos de manera
+     contigua en memoria. Son eficaces para el acceso aleatorio, es decir,
+     puedes acceder a cualquier elemento en tiempo constante **O(1)** si conoces
+     su índice.
+     - Sin embargo, los **arrays tienen un tamaño fijo** y no son eficientes si
+     necesitas insertar o eliminar elementos en el medio, ya que se debe mover
+     toda la estructura.
+   - **Listas Enlazadas (Linked Lists)**: Son una estructura de datos en la que
+   cada elemento contiene una referencia (o puntero) al siguiente.
+   A diferencia de los arrays, las listas enlazadas pueden crecer dinámicamente
+   sin necesidad de especificar su tamaño de antemano.
+    - La principal diferencia con los arrays es que el acceso a un elemento
+    específico no es **O(1)**, sino **O(n)**, ya que debes recorrer la lista
+    desde el principio hasta el elemento deseado.
+   - **Árboles Binarios**: Una estructura en la que cada nodo tiene como máximo
+   dos hijos. La búsqueda binaria se usa típicamente en estructuras como los
+   árboles binarios de búsqueda (BST), donde los valores a la izquierda de
+   un nodo son menores que el valor del nodo y los valores a la derecha son
+   mayores.
+
+### 4. **Complejidad Temporal y Espacial**:
+   - **Análisis de la Complejidad**: Es fundamental entender la complejidad de
+   los algoritmos en términos de tiempo y espacio. Para **búsqueda binaria**,
+   se habla de una complejidad temporal de **O(log n)**, lo que implica que el
+   número de operaciones necesarias para buscar un elemento en el array se
+   reduce a la mitad con cada paso.
+   - **Complejidad Espacial**: En el caso de la búsqueda binaria recursiva,
+   la complejidad espacial es **O(log n)** debido a la pila de llamadas,
+   mientras que la versión iterativa tiene una complejidad espacial de **O(1)**.
+
+### 5. **Otros Algoritmos de Búsqueda**:
+   - **Búsqueda por Interpolación**: Similar a la búsqueda binaria, pero en
+   lugar de dividir el array en mitades iguales, se calcula la posición de
+   búsqueda basándose en una interpolación (suponiendo que los elementos están
+   distribuidos uniformemente).
+   - **Búsqueda Exponencial**: Combina la búsqueda binaria con una técnica de
+   expansión para encontrar el rango del índice donde podría estar el elemento.
+   Luego realiza una búsqueda binaria dentro de ese rango.
+
+### 6. **Casos y Variantes de la Búsqueda Binaria**:
+   - **Búsqueda Binaria para el Índice de Inserción**: Encontrar el lugar
+   adecuado para insertar un elemento en un array ordenado sin cambiar la
+   ordenación.
+   - **Búsqueda Binaria para Valores Duplicados**: Cómo encontrar el primer o
+   el último índice de un valor duplicado.
+
+### 7. **Ordenamiento**:
+   - La búsqueda binaria es a menudo utilizada en algoritmos de ordenamiento.
+   Por ejemplo, en un **algoritmo de inserción binaria**
+   (una variante del algoritmo de inserción), se usa búsqueda binaria para
+   encontrar el punto de inserción en lugar de recorrer secuencialmente los
+   elementos.
+
+---
+
+### Posibles Preguntas de Entrevista Técnicas:
+1. **¿Cuáles son las diferencias entre búsqueda binaria y búsqueda lineal?**
+2. **¿Cómo implementas la búsqueda binaria? ¿Qué diferencias hay entre la versión recursiva y la iterativa?**
+3. **¿En qué situaciones elegirías una lista enlazada sobre un array?**
+4. **¿Cómo afecta la complejidad de los datos no ordenados en los algoritmos de búsqueda?**
+5. **¿Cuál es la complejidad de la búsqueda binaria en una lista enlazada? ¿Por qué no se puede aplicar la búsqueda binaria directamente a listas enlazadas?**
+6. **¿Qué sucede si los datos no están ordenados en una operación de búsqueda binaria?**
+
+Es importante que puedas hablar sobre estos temas y sus diferencias, además de ser capaz de explicar cómo se relacionan las complejidades de los algoritmos con el rendimiento del sistema. ¡Espero que esta información te sea útil para prepararte!

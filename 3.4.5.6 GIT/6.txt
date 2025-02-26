@@ -1,0 +1,41 @@
+How do you switch to the "máster" branch?
+
+Git branch master
+Git checkout master
+Git fetch master
+Git pull master
+
+Pregunta:
+¿Cómo cambias a la rama "master"?
+1.	Git branch master
+2.	Git checkout master - correcta
+3.	Git fetch master
+4.	Git pull master
+
+Respuesta correcta:
+Git checkout master
+
+Explicación:
+•	Git branch master:
+Este comando crea una nueva rama llamada master, pero no te cambia a ella.
+Si ya estás en la rama correcta y solo quieres listar las ramas o crear una
+nueva, este sería el comando adecuado.
+
+•	Git checkout master:
+Este es el comando correcto para cambiar a la rama master. git checkout se usa
+para cambiar de una rama a otra en un repositorio de Git. Esto hará que tu
+directorio de trabajo se actualice a la última versión de la rama master.
+
+•	Git fetch master:
+git fetch se utiliza para descargar los cambios desde el repositorio remoto,
+pero no cambia tu rama actual. Si deseas obtener la última versión de la rama
+master desde el repositorio remoto, usarías git fetch origin (o git fetch)
+seguido de git checkout master para cambiar a ella después de haberla
+actualizado.
+
+•	Git pull master:
+git pull se utiliza para descargar y fusionar cambios desde el repositorio
+remoto en la rama actual. Sin embargo, git pull no se usa para cambiar de rama.
+Para cambiar a la rama master y obtener sus cambios, se usaría git checkout
+master seguido de git pull si se desea actualizar la rama después de haber
+cambiado a ella.

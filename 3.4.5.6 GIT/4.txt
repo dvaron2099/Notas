@@ -1,0 +1,35 @@
+Por lo tanto, la respuesta correcta es git checkout -b ....
+Este comando es usado para crear una nueva rama y cambiarte a ella de manera
+simultánea.
+How dou you get a copy of a remonte repository
+
+Git checkout URL
+Git clone URL
+Git for URL
+
+Pregunta:
+¿Cómo obtienes una copia de un repositorio remoto?
+1.	Git checkout URL
+2.	Git clone URL
+3.	Git for URL
+
+Respuesta correcta:
+Git clone URL
+Explicación:
+•	Git checkout URL:
+Este comando no es correcto. git checkout se usa para cambiar de ramas en un
+repositorio local o para traer cambios de un repositorio remoto ya existente,
+pero git checkout no sirve para obtener una copia de un repositorio remoto.
+
+•	Git clone URL:
+Este es el comando correcto. git clone se utiliza para obtener una copia
+completa de un repositorio remoto, lo que incluye todo el historial de commits
+y las ramas del repositorio. Este comando descarga el repositorio desde la URL
+proporcionada y crea una copia local en tu máquina.
+
+•	Git for URL:
+Este comando no es válido en Git. No existe una opción git for en el conjunto de
+comandos estándar de Git.
+
+Por lo tanto, la respuesta correcta es git clone URL, que se usa para obtener
+una copia completa de un repositorio remoto en tu máquina local.

@@ -1,0 +1,144 @@
+que es un iterador
+ El iterador es un método que busca en los ítems de una colección (Array, Range, …)
+ para ejecutar una acción o testear una condición dada en un bloque:
+
+¿Cómo definimos un método que pueda aceptar un bloque como argumento?
+  Necesitamos usar la palabra clave yield en la definición de nuestro método.
+
+  Al llamar al método con un bloque, dicho bloque será llamado cuando se ejecute yield:
+
+  def timer
+  start_time = Time.now
+  yield
+  puts "Elapsed time: #{Time.now - start_time}s"
+  end
+
+  timer do
+    sleep(2)
+  end
+  # "Elapsed time: 2s"
+
+¿Cómo podríamos definir un método que acepte a un bloque con parámetros?
+  Debemos usar yield(parameters)
+
+    def greet(name)
+    capitalized_name = name.capitalize
+    puts yield(capitalized_name)
+  end
+
+  me = "john"
+
+  greet(me) do |name|
+    "Greetings, #{name}, you look quite fine today!"
+  end
+
+  # => "Greetings, John, you look quite fine today!"
+
+¿Qué es un bloque? ¿Cuáles son las dos formas de escribir uno?
+  El bloque es como un método anónimo. Puedes pasárselo como argumento a un método:
+  do |num|
+    num * 2
+  end
+
+  o en una línea, reemplazando do y end por { and }:
+
+  { |num| num * 2 }
+
+¿Qué es un método destructivo? Menciona un ejemplo.
+
+  Un método destructivo llamado en una variable la modifica permanentemente.
+
+  La convención para los métodos destructivos es que terminen en ! como en #capitalize!
+  o #map! para no olvidar que son peligrosos
+
+  Si queremos cambiar la primera letra sola de un string a mayúscula, hacemos lo siguiente:
+
+  name = "john"
+  name.capitalize!
+  puts name
+  # => "John"
+
+  Si queremos cambiar un array de strings para poner la
+  primera letra sola de cada una de ellas a mayúscula, hacemos lo siguiente:
+
+  names = ["JOHN", "paul", "Ringo", "gEOrgEs"]
+
+  names.map! do |name|
+    name.capitalize
+  end
+  puts names
+  # => ["John", "Paul", "Ringo", "Georges"]
+
+¿Qué devolverá este bloque?
+
+  do |num|
+    num * 2
+    num += 1
+    "Youpi"
+  end
+
+  Siendo un método, un bloque de líneas múltiples devuelve la última acción ejecutada:
+  Devolverá Youpi
+
+¿Cómo podemos obtener el primer ítem de un Array que cumpla con una condición dada?
+  .find
+
+¿Cómo podemos agrupar ítems de un Array por pares?
+
+  Podemos llamar a #each_slice en dicho array especificando en el argumento el tamaño de cada grupo:
+
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  numbers.each_slice(2).to_a
+  # => [[1, 2], [3, 4], [5, 6], [7, 8], [9]]
+
+¿Cómo limpiamos un Array de ítems que cumplan con una condición dada?
+
+  Podemos llamar al iterador #reject en dicho array pasándole la condición en un bloque:
+  musicians = ["Jimmy Page", "Robert Plant", "John Paul Jones", "John Bonham"]
+
+  musicians.reject do |musician|
+    musician.start_with?("J") # solo rechaza los elementos que empiecen por "J"
+  end
+
+  # => ["Robert Plant"]
+
+¿Cómo transformamos un array en otro con elementos que cumplan con una condición dada?
+
+  Podemos usar el iterador #select en dicho array y pasarle la condición en un bloque:
+
+  musicians = ["Jimmy Page", "Robert Plant", "John Paul Jones", "John Bonham"]
+
+  musicians.select do |musician|
+    musician[0] == "J" # se seleccionan solamente los elementos que comienzan por "J"
+  end
+
+  # => ["Jimmy Page", "John Paul Jones", "John Bonham"]
+
+¿Hay una manera de obtener el index y el elemento cuando se itera a través de un Array?
+
+  Podemos usar #each_with_index
+
+  musicians = ["Jimmy Page", "Robert Plant", "John Paul Jones", "John Bonham"]
+
+  musicians.each_with_index do |musician, index|
+    puts "#{index + 1} - #{musician}"
+  end
+
+  # 1 - Jimmy Page
+  # 2 - Robert Plant
+  # 3 - John Paul Jones
+  # 4 - John Bonham
+
+¿Qué iterador debemos llamar en un Array para obtener otro Array donde todos los
+elementos tengan el mismo tratamiento?
+
+  Para eso debemos usar #map:
+
+  musicians = ["Jimmy Page", "Robert Plant", "John Paul Jones", "John Bonham"]
+
+  musicians.map do |musician|
+    musician.upcase
+  end
+
+  # => ["JIMMY PAGE", "ROBERT PLANT", "JOHN PAUL JONES", "JOHN BONHAM"]

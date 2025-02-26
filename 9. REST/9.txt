@@ -1,0 +1,42 @@
+Rest is a architecture to provided to data over a network through a API. Which of the following are true?
+
+•	Rest is strictly a client-server interaction type meaning that the client
+performs requests and the server send responses to These requests - correcta
+
+•	Rest is a server-server interaction meaning that both sided can maje requests
+and send responses to requests.
+
+•	In Rest architecture, a properly designed Acces endpoint should not specify
+action as a part of the resource URI. Instead, action should be specified usibg
+appropiate protocolo Methods such as GET, POST, PUT and DELETE over HTTP - correcta
+
+•	Rest responses are not capable of specifying any caching related information
+regarding the accesed resource. Caching must be resolved Whit other mechanisms
+------------------------------------------------------------------------------------
+Pregunta:
+REST es una arquitectura para proporcionar datos a través de una API sobre una red.
+¿Cuáles de las siguientes son correctas?
+
+1.	REST es estrictamente un tipo de interacción cliente-servidor, lo que significa
+que el cliente realiza solicitudes y el servidor envía respuestas a estas solicitudes.
+
+2.	REST es una interacción servidor-servidor, lo que significa que ambos lados pueden
+hacer solicitudes y enviar respuestas a solicitudes.
+
+3.	En la arquitectura REST, un punto de acceso bien diseñado no debe especificar
+una acción como parte de la URI del recurso. En su lugar, la acción debe especificarse
+utilizando los métodos de protocolo adecuados, como GET, POST, PUT y DELETE a través de HTTP.
+
+4.	Las respuestas REST no son capaces de especificar información relacionada con
+el almacenamiento en caché del recurso accedido. El almacenamiento en caché debe
+resolverse con otros mecanismos.
+
+Respuestas correctas:
+1.	REST es estrictamente un tipo de interacción cliente-servidor, lo que significa que el cliente realiza solicitudes y el servidor envía respuestas a estas solicitudes.
+2.	En la arquitectura REST, un punto de acceso bien diseñado no debe especificar una acción como parte de la URI del recurso. En su lugar, la acción debe especificarse utilizando los métodos de protocolo adecuados, como GET, POST, PUT y DELETE a través de HTTP.
+________________________________________
+Explicación:
+1.	Primera respuesta: Correcta. REST es una arquitectura cliente-servidor donde el cliente (como una aplicación o navegador) realiza solicitudes, y el servidor (el servicio que aloja los datos) envía las respuestas. Este modelo es fundamental para la separación de responsabilidades y escalabilidad.
+2.	Segunda respuesta: Incorrecta. REST no se considera una interacción servidor-servidor. En REST, el servidor actúa como un proveedor de recursos y el cliente solicita esos recursos. Es una arquitectura cliente-servidor, no una interacción de igual a igual entre servidores.
+3.	Tercera respuesta: Correcta. En REST, las acciones no deben estar especificadas directamente en la URI (como GET /create-user). Las acciones (como crear, leer, actualizar o eliminar) se especifican utilizando los métodos HTTP correspondientes: GET para leer, POST para crear, PUT para actualizar, y DELETE para eliminar.
+4.	Cuarta respuesta: Incorrecta. REST permite especificar información relacionada con la caché a través de cabeceras HTTP. Por ejemplo, los encabezados como Cache-Control y ETag se pueden usar para gestionar el almacenamiento en caché de recursos. Así que el almacenamiento en caché no debe resolverse necesariamente con mecanismos externos, sino que se puede gestionar dentro del propio protocolo HTTP que REST utiliza.

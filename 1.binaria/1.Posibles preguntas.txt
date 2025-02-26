@@ -1,0 +1,89 @@
+Claro, aquí te respondo las preguntas que mencioné al final, basándome en los conceptos de búsqueda binaria, arrays y listas enlazadas:
+
+### 1. **¿Cuáles son las diferencias entre búsqueda binaria y búsqueda lineal?**
+
+- **Búsqueda binaria**:
+  - Se utiliza en arrays o listas ordenadas.
+  - Divide el array en mitades en cada paso, reduciendo la búsqueda a la mitad en cada iteración.
+  - **Complejidad temporal**: **O(log n)**.
+  - Más eficiente para búsquedas en arrays grandes ordenados.
+
+- **Búsqueda lineal**:
+  - Se utiliza en arrays o listas no necesariamente ordenadas.
+  - Recorre cada elemento de la lista secuencialmente hasta encontrar el objetivo.
+  - **Complejidad temporal**: **O(n)**.
+  - Menos eficiente que la búsqueda binaria, pero se puede usar en listas desordenadas.
+
+### 2. **¿Cómo implementas la búsqueda binaria? ¿Qué diferencias hay entre la versión recursiva y la iterativa?**
+
+**Implementación recursiva**:
+```python
+def binary_search(arr, target, low, high):
+    if low > high:
+        return -1  # Elemento no encontrado
+    mid = (low + high) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search(arr, target, mid + 1, high)
+    else:
+        return binary_search(arr, target, low, mid - 1)
+```
+
+**Implementación iterativa**:
+```python
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+```
+
+**Diferencias**:
+- **Recursiva**: Utiliza llamadas a la función para dividir el array. Cada llamada añade un nuevo marco en la pila, lo que puede consumir más memoria en arrays grandes.
+- **Iterativa**: No usa la pila de llamadas, por lo que es más eficiente en términos de memoria. Es la forma preferida en sistemas con limitaciones de memoria.
+
+### 3. **¿En qué situaciones elegirías una lista enlazada sobre un array?**
+
+- **Cuando necesitas inserciones y eliminaciones frecuentes** en medio de la estructura de datos sin preocuparte por la reubicación de otros elementos. Las listas enlazadas son eficientes en este sentido (O(1) para inserciones y eliminaciones si tienes el nodo).
+
+- **Cuando el tamaño de la estructura no está predefinido**, ya que las listas enlazadas pueden crecer dinámicamente sin necesidad de redefinir el tamaño como los arrays.
+
+- **Cuando no necesitas acceso aleatorio** a los elementos, ya que las listas enlazadas no permiten acceso directo por índice (O(n) para encontrar un elemento).
+
+### 4. **¿Cómo afecta la complejidad de los datos no ordenados en los algoritmos de búsqueda?**
+
+Si los datos no están ordenados, la **búsqueda binaria no se puede aplicar**, ya que requiere que los elementos estén organizados de manera ascendente o descendente para poder dividir el array en mitades correctamente.
+
+En **búsqueda lineal**, la falta de orden no afecta el algoritmo, ya que simplemente recorre los elementos uno por uno hasta encontrar el objetivo. Sin embargo, su complejidad es O(n), lo que puede ser menos eficiente en arrays grandes en comparación con la búsqueda binaria en datos ordenados.
+
+Si necesitas realizar búsquedas frecuentemente en datos no ordenados, podrías considerar ordenarlos primero o usar estructuras de datos como **tablas de hash** o **árboles balanceados** que permitan búsquedas eficientes sin necesidad de ordenamiento previo.
+
+### 5. **¿Cuál es la complejidad de la búsqueda binaria en una lista enlazada? ¿Por qué no se puede aplicar la búsqueda binaria directamente a listas enlazadas?**
+
+La **búsqueda binaria no se puede aplicar directamente en una lista enlazada** porque no tiene acceso aleatorio a los elementos. En un **array**, puedes acceder a cualquier elemento por su índice en tiempo constante **O(1)**, lo cual es necesario para dividir el array de manera eficiente en mitades en cada paso de la búsqueda binaria.
+
+En una **lista enlazada**, debes recorrer los elementos desde el principio hasta encontrar el nodo medio, lo que convierte la búsqueda binaria en un proceso lineal **O(n)**, lo que la hace ineficiente.
+
+### 6. **¿Qué sucede si los datos no están ordenados en una operación de búsqueda binaria?**
+
+Si los datos no están ordenados, la búsqueda binaria no funcionará correctamente porque depende de que los datos estén organizados para dividirlos en mitades y realizar comparaciones de manera efectiva. Si intentas hacer una búsqueda binaria en datos desordenados, los resultados serán incorrectos.
+
+En este caso, se debería utilizar una **búsqueda lineal**, o primero ordenar los datos (lo cual tiene una complejidad de **O(n log n)** en el caso de un algoritmo de ordenamiento eficiente) y luego aplicar la búsqueda binaria.
+
+---
+
+### Resumen de Conceptos Clave:
+- **Búsqueda binaria**: Se aplica solo en arrays o listas ordenadas, con una complejidad **O(log n)**.
+- **Búsqueda lineal**: Se aplica en arrays y listas no ordenadas, con una complejidad **O(n)**.
+- **Arrays vs Listas enlazadas**: Los arrays son más eficientes en acceso aleatorio, mientras que las listas enlazadas son mejores para inserciones y eliminaciones dinámicas.
+- **Ordenamiento y búsqueda**: Para aplicar la búsqueda binaria, los datos deben estar ordenados, y si no están ordenados, debes recurrir a la búsqueda lineal o primero ordenar los datos.
+
+Espero que estas respuestas te ayuden a prepararte para tu entrevista técnica. Si necesitas más detalles o ejemplos, ¡avísame!

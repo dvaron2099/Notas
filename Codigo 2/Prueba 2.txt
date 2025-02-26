@@ -1,0 +1,131 @@
+# complete the 'getVoteCount'
+
+# The función is expected to return a Integer
+# The function accepts following parameters
+# 1. String cityName
+# 2. Integer etimatedCost
+# API URL: https://aqui la dirección es larga
+#
+
+Esta es la descripccion del codigo
+Traducelo al español y dime que es lo que se requiere
+
+def getVoteCount(Cityname, estimatedCost) :
+      #write code
+### Traducción al español de la descripción del código:
+
+> **Completa la función 'getVoteCount'**
+>
+> La función debe devolver un **entero**.
+> La función acepta los siguientes parámetros:
+> 1. **cityName** (Cadena de texto)
+> 2. **estimatedCost** (Número entero)
+>
+> **URL de la API**: https://aquí la dirección es larga
+
+### Explicación de lo que se requiere:
+
+La descripción indica que debes completar una función llamada `getVoteCount`. Esta función recibe dos parámetros:
+
+1. `cityName`: que es el nombre de una ciudad, representado como una cadena de texto.
+2. `estimatedCost`: que es un costo estimado, representado como un número entero.
+
+El objetivo es que la función **devuelva un número entero**. A partir de la descripción
+y de la mención de la "API URL", parece que se te pide hacer una llamada a una API para
+obtener datos relacionados con la ciudad y el costo estimado, y usar esos datos para
+calcular el número de votos o alguna información relevante.
+
+Sin embargo, no se especifica completamente qué datos devuelve la API ni cómo se debe hacer la llamada.
+
+En términos generales, parece que necesitas realizar una solicitud a la API proporcionada
+(aunque no se da la URL completa), procesar los datos que recibes y retornar un valor entero.
+---------------------------------------------------------------------
+
+import requests
+
+def getVoteCount(cityName, estimatedCost):
+    # URL de la API (reemplaza con la URL correcta)
+    api_url = "https://aqui-la-direccion-es-larga"
+
+    # Parámetros de la solicitud
+    params = {
+        "cityName": cityName,
+        "estimatedCost": estimatedCost
+    }
+
+    try:
+        # Hacemos la solicitud GET a la API
+        response = requests.get(api_url, params=params)
+
+        # Verificamos si la solicitud fue exitosa (código 200)
+        if response.status_code == 200:
+            # Parseamos la respuesta JSON
+            data = response.json()
+
+            # Suponemos que la respuesta tiene un campo "voteCount"
+            vote_count = data.get("voteCount", 0)
+            return vote_count
+        else:
+            # Si la solicitud no fue exitosa, retornamos 0 o manejamos el error
+            print(f"Error: {response.status_code} - {response.text}")
+            return 0
+    except Exception as e:
+        # Manejo de excepciones (por ejemplo, problemas de conexión)
+        print(f"Exception: {e}")
+        return 0
+
+# Ejemplo de uso
+if __name__ == '__main__':
+    cityName = "New York"
+    estimatedCost = 100000
+    print(getVoteCount(cityName, estimatedCost))
+
+---------------------------------------------------------------------
+import urllib.request
+import json
+
+def getVoteCount(cityName, estimatedCost):
+    # URL de la API (reemplaza con la URL correcta)
+    api_url = "https://aqui-la-direccion-es-larga"
+
+    # Parámetros de la solicitud
+    params = {
+        "cityName": cityName,
+        "estimatedCost": estimatedCost
+    }
+
+    # Convertir los parámetros a una cadena de consulta
+    query_string = urllib.parse.urlencode(params)
+    full_url = f"{api_url}?{query_string}"
+
+    try:
+        # Hacemos la solicitud GET a la API
+        with urllib.request.urlopen(full_url) as response:
+            # Leer la respuesta
+            response_data = response.read().decode('utf-8')
+
+            # Parsear la respuesta JSON
+            data = json.loads(response_data)
+
+            # Verificar si la clave "voteCount" existe en la respuesta
+            if "voteCount" in data:
+                vote_count = data["voteCount"]
+                return vote_count
+            else:
+                # Si la clave no existe, retornamos 0
+                print("Error: La clave 'voteCount' no está presente en la respuesta.")
+                return 0
+    except urllib.error.HTTPError as e:
+        # Manejo de errores HTTP
+        print(f"Error HTTP: {e.code} - {e.reason}")
+        return 0
+    except Exception as e:
+        # Manejo de otras excepciones (por ejemplo, problemas de conexión)
+        print(f"Exception: {e}")
+        return 0
+
+# Ejemplo de uso
+if __name__ == '__main__':
+    cityName = "New York"
+    estimatedCost = 100000
+    print(getVoteCount(cityName, estimatedCost))

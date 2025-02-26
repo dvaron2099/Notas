@@ -1,0 +1,43 @@
+Por lo tanto, la respuesta correcta es git clone URL, que se usa para obtener
+una copia completa de un repositorio remoto en tu máquina local.
+
+
+You had a unpushed commit and accidental executed <git push>. What would you do
+in this situación besides of telling your teammates?
+
+1. Just tell my colleagues as my command cannot be undone
+2. Remove the Last commit and run git push - - force
+3. Run a git revertir and push again
+
+Una sola correcta
+
+Pregunta:
+Tuviste un commit que no habías enviado y accidentalmente ejecutaste <git push>.
+¿Qué harías en esta situación además de contarle a tus compañeros?
+
+1.	Solo decirle a mis compañeros ya que mi comando no se puede deshacer.
+2.	Eliminar el último commit y ejecutar git push --force.
+3.	Ejecutar un git revert y hacer un nuevo push.
+
+Respuesta correcta:
+Ejecutar un git revert y hacer un nuevo push.
+Explicación:
+•	Opción 1: "Solo decirle a mis compañeros ya que mi comando no se puede deshacer."
+Esta opción es incorrecta. Si bien es cierto que git push empuja los cambios al
+repositorio remoto, sí se puede revertir el cambio usando Git, y no es necesario
+resignarse a solo contarle a los compañeros sin tomar acción.
+
+•	Opción 2: "Eliminar el último commit y ejecutar git push --force."
+Esta opción no es ideal en muchos casos. El uso de git push --force puede
+sobrescribir el historial en el repositorio remoto, lo cual puede causar
+problemas a otros miembros del equipo si han basado su trabajo en esos commits.
+Es una operación riesgosa, especialmente si el repositorio es compartido y si
+hay otros cambios que dependan de esa historia.
+
+•	Opción 3: "Ejecutar un git revert y hacer un nuevo push."
+Esta es la opción correcta. git revert crea un nuevo commit que revierte los
+cambios del commit anterior, sin modificar el historial del repositorio.
+Después de hacer el revert, puedes hacer un git push para enviar el nuevo
+commit al repositorio remoto. Esto es seguro y evita los riesgos asociados con sobrescribir el historial remoto.
+Por lo tanto, la mejor práctica sería git revert y luego hacer un nuevo git push.
+Esta opción preserva la integridad del historial y es segura para los demás miembros del equipo.

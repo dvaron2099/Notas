@@ -1,0 +1,101 @@
+### ¿Qué es REST?
+
+**REST** (Representational State Transfer) es una arquitectura para proporcionar
+servicios a través de la web, en la que los recursos (datos) se acceden a través de
+URLs y se interactúa con ellos utilizando los métodos estándar del protocolo HTTP
+(GET, POST, PUT, DELETE). Fue introducido por **Roy Fielding** en su tesis doctoral en el año 2000.
+
+REST se basa en una serie de principios y restricciones que buscan crear una
+arquitectura simple, escalable y eficiente para interactuar con sistemas distribuidos,
+como las APIs web.
+
+### Principios clave de REST:
+
+1. **Interacción cliente-servidor**: REST sigue el modelo cliente-servidor,
+donde el **cliente** hace solicitudes y el **servidor** responde con los recursos
+solicitados. La lógica de negocio y los datos están separados, lo que permite que
+el servidor se enfoque en gestionar los recursos y el cliente se enfoque en la
+presentación o el comportamiento de la aplicación.
+
+2. **Sin estado (Stateless)**: Cada solicitud realizada por el cliente al servidor
+debe contener toda la información necesaria para entender y procesar la solicitud.
+El servidor no debe almacenar el estado de las solicitudes anteriores. Esto significa
+que cada solicitud es independiente y no depende de ninguna solicitud previa.
+
+3. **Caché (Cacheable)**: Las respuestas a las solicitudes deben indicar si los datos
+pueden ser almacenados en caché o no. El almacenamiento en caché mejora el rendimiento
+al reducir la cantidad de solicitudes y respuestas entre el cliente y el servidor.
+
+4. **Interfaz uniforme (Uniform Interface)**: REST establece que debe existir una
+interfaz estándar y consistente para acceder a los recursos. Esto facilita la
+interacción entre cliente y servidor. Las URIs (Identificadores de Recursos Uniformes)
+son una parte clave de esta interfaz.
+
+5. **Modelo basado en recursos**: En REST, los recursos (datos) se identifican de
+manera única a través de URIs. Cada recurso es accesible a través de una URL,
+y las acciones que se pueden realizar sobre esos recursos se definen mediante los métodos HTTP.
+
+### Métodos HTTP en REST:
+
+1. **GET**: Usado para **leer** o recuperar un recurso. No debe modificar el estado del servidor.
+   - Ejemplo: `GET /users/123` (Recupera la información del usuario con ID 123)
+
+2. **POST**: Usado para **crear** un nuevo recurso. A menudo, se usa para enviar datos a un servidor.
+   - Ejemplo: `POST /users` (Crea un nuevo usuario)
+
+3. **PUT**: Usado para **actualizar** un recurso existente. Reemplaza el recurso completo en el servidor.
+   - Ejemplo: `PUT /users/123` (Actualiza el usuario con ID 123)
+
+4. **DELETE**: Usado para **eliminar** un recurso.
+   - Ejemplo: `DELETE /users/123` (Elimina el usuario con ID 123)
+
+5. **PATCH**: Similar a PUT, pero generalmente se usa para actualizar parcialmente un recurso.
+
+### Otras características clave de REST:
+
+- **Acceso a recursos mediante URIs**: Cada recurso (como un usuario, producto
+o documento) debe tener una URI única. Por ejemplo, `/products/123` puede representar
+un producto con ID 123.
+
+- **Representaciones de los recursos**: Los recursos no son accedidos directamente,
+sino a través de **representaciones**. Cuando un cliente solicita un recurso, el s
+ervidor responde con una representación del recurso, que generalmente está en formato JSON o XML.
+
+### Respuesta a la pregunta:
+
+Ahora que hemos cubierto los conceptos esenciales de REST, podemos volver a las
+opciones de la pregunta y entender por qué algunas son correctas y otras incorrectas:
+
+1. **REST es estrictamente un tipo de interacción cliente-servidor, lo que significa
+que el cliente realiza solicitudes y el servidor envía respuestas a estas solicitudes.**
+   - **Correcto**: En REST, siempre existe una separación clara entre el cliente y el s
+   ervidor, donde el cliente realiza solicitudes y el servidor responde. Esto es uno de los
+   principios básicos de la arquitectura REST.
+
+2. **REST es una interacción servidor-servidor, lo que significa que ambos lados
+pueden hacer solicitudes y enviar respuestas a solicitudes.**
+   - **Incorrecto**: REST sigue el modelo cliente-servidor, no una interacción de
+   igual a igual entre servidores. En este modelo, el servidor proporciona recursos
+   y el cliente realiza solicitudes para obtener o modificar esos recursos.
+
+3. **En la arquitectura REST, un punto de acceso bien diseñado no debe especificar
+una acción como parte de la URI del recurso. En su lugar, la acción debe especificarse
+utilizando los métodos de protocolo adecuados, como GET, POST, PUT y DELETE a través de HTTP.**
+   - **Correcto**: En REST, la URI debe identificar recursos, no acciones.
+   Por ejemplo, no se debe usar algo como `/create-user`, sino que la acción (crear un usuario)
+   debe realizarse utilizando el método adecuado como `POST` a `/users`.
+
+4. **Las respuestas REST no son capaces de especificar información relacionada
+con el almacenamiento en caché del recurso accedido. El almacenamiento en caché
+debe resolverse con otros mecanismos.**
+   - **Incorrecto**: REST permite especificar información sobre el almacenamiento
+   en caché utilizando cabeceras HTTP, como `Cache-Control`, `ETag` y `Last-Modified`.
+   Estas cabeceras ayudan a gestionar el almacenamiento en caché de los recursos
+   directamente dentro del protocolo HTTP.
+
+### Resumen:
+
+Para entender la pregunta correctamente, es importante conocer los principios y
+restricciones clave de REST, como la separación cliente-servidor, el uso de métodos
+HTTP para realizar acciones sobre recursos y la gestión del almacenamiento en caché.
+Las respuestas correctas están alineadas con estos principios fundamentales de REST.

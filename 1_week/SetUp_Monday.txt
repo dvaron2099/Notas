@@ -1,0 +1,28 @@
+Terminal
+  cd <nombre de carpeta> >> cambiar de carpeta
+  cd (o cd~)>> regresa al inicio
+  ls >> lista el contenido de la carpeta
+  rm <nombre delm archivo> >> remueve el archivo
+  rm -rf <nombre de la carpeta> >> remueve la carpeta
+  mkdir <nombre carpeta> >> crea una carpeta
+  .. (cd ..)>> retrocede
+  touch <nombre de archivo>>> crea un archivo, si no se le coloca apellid (.rb por ejemplo) lo crea txt
+  pwd >> muestra la direccion de la carpeta donde estas parado
+  ll >> muestra el contenido mas detallado
+  ls -a >>muestra archivos ocultos
+  mv "archivo.txt" "nuevo_nombre" >> cambia el nombre de un archivo
+  mv "archivo.txt" carpeta/ >> mueve el archivo a un directorio
+  mv directorio_antiguo/ directorio_nuevo/ >> cambia el nombre del directorio
+  mv directorio_origen/ directorio_destino/ >> mueve un directorio y su contenido a otro
+  . >> representa la direccion actual
+
+Git
+  git status >> mira el estado de git
+  git add <nombre del archivo> >> añade a statging el archivo
+  git add * >> lo mismo pero todos los archivos
+  git commit -m "nota">> hace el commit con una nota para recordar
+  git diff >>
+  git clone <direecion del repositorio> - clona un repositorio existente
+  git push origin master >> sube el nuevo codigo a GitHub
+  git log >> historial de commits de nuestro repo
+  git log -p >> vemos los cambios que se han realizado

@@ -1,0 +1,72 @@
+
+Comandos Basicos
+git init
+  Inicializa un nuevo repositorio Git en el directorio actual.
+git clone https://github.com/usuario/repositorio.git
+  Clona un repositorio remoto a tu máquina local.
+git status
+  Muestra el estado de los archivos en el repositorio, indicando si hay cambios no cometidos.
+git add archivo.txt
+  Añade un archivo específico al área de staging (preparación) para ser comiteado.
+git add .
+  Añade todos los archivos modificados y nuevos al área de staging.
+git commit -m "Mensaje del commit"
+  Crea un commit con los cambios que han sido añadidos al área de staging.
+git log
+  Muestra el historial de commits del repositorio.
+git diff
+  Muestra las diferencias entre el archivo en el área de staging y el último commit.
+git reset archivo.txt
+  Deshace los cambios realizados en el archivo, dejándolo igual que en el último commit (sin eliminar el archivo).
+git reset --hard
+  Deshace todos los cambios no cometidos, restaurando todos los archivos al último commit.
+
+Comandos para branch
+git branch
+  Muestra las ramas locales disponibles.
+git branch nueva_rama
+  Crea una nueva rama.
+git checkout nueva_rama
+  Cambia a la rama especificada.
+git checkout -b nueva_rama
+  Crea una nueva rama y cambia a ella.
+git merge rama_a_fusionar
+  Fusiona los cambios de la rama especificada a la rama actual.
+git branch -d rama_a_eliminar
+  Elimina una rama local que ya ha sido fusionada.
+git branch -D rama_a_eliminar
+  Elimina una rama local, incluso si no ha sido fusionada.
+
+Comandos para Repositorios Remotos
+git remote -v
+  Muestra las URLs de los repositorios remotos configurados para el repositorio local.
+git remote add origin https://github.com/usuario/repositorio.git
+  Añade un repositorio remoto a tu repositorio local.
+git push origin main
+  Envía tus commits locales a la rama especificada en el repositorio remoto.
+git pull origin main
+  Obtiene los cambios del repositorio remoto y los fusiona con tu rama local.
+git fetch origin
+  Descarga los cambios del repositorio remoto sin fusionarlos automáticamente con tu rama local.
+git push --force
+  Fuerza el envío de cambios al repositorio remoto, sobrescribiendo la historia de la rama en el remoto (se debe usar con precaución).
+
+Comandos avanzados
+git rebase main
+  Aplica los cambios de una rama sobre otra, reescribiendo la historia de la rama base.
+git stash
+  Guarda los cambios no cometidos temporalmente y limpia el directorio de trabajo.
+git stash pop
+  Recupera los cambios que guardaste previamente con git stash.
+git cherry-pick abc1234
+  Aplica un commit específico de otra rama en tu rama actual.
+git tag v1.0.0
+  Crea una etiqueta para marcar un punto específico en la historia del repositorio.
+git reflog
+  Muestra el historial de los movimientos de la referencia de HEAD, útil para recuperar commits perdidos.
+
+Comandos de ayuda
+git help
+  Muestra la ayuda de Git.
+git push --help
+  Muestra la ayuda para un comando específico.

@@ -1,0 +1,29 @@
+You are a ti en complexión listo of n productos, each with a names, price and weight.
+Find out how many duplica productos are present whitin the list
+Duplicate productos contain idéntica para meterse for all fields in the list
+
+
+# complete the 'numDuolicates' funcrion below
+#
+# The función is expected to return a Integer
+# The función accepts following parameters
+
+
+# 1. STRING_ARRAY name
+# 2. INTEGER_ARRAY price
+# 3. INTEGER_ARRAY weight
+
+
+def numDuplicates(name, price, weight):
+      # write your code here
+If __name__ == '__main__' :
+
+Tienes una lista de n productos, cada uno con un nombre, precio y peso.
+Determina cuántos productos duplicados están presentes dentro de la lista.
+Los productos duplicados contienen los mismos valores en todos los campos de
+la lista (nombre, precio y peso).
+
+La tarea es crear una función que reciba tres listas (nombre, precio y peso
+de los productos) y devuelva el número de productos que están duplicados.
+Un producto se considera duplicado si tiene el mismo nombre, precio y peso
+que otro producto en la lista.

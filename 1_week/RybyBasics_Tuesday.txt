@@ -1,0 +1,11 @@
+Variable = un contenedor que almacena un valor
+metodo = es un bloque de código que se define dentro
+  de una clase y que realiza una tarea específica. Se utiliza
+  para encapsular la funcionalidad y datos que pertenecen a una
+  clase y se pueden llamar para que se ejecuten cuando se necesiten.
+
+formas para crear un array
+
+%w[Huey Dewey Louie]  #=> ["Huey", "Dewey", "Louie"]
+%w(Huey Dewey Louie)  #=> ["Huey", "Dewey", "Louie"]
+%w{Huey Dewey Louie}  #=> ["Huey", "Dewey", "Louie"]
