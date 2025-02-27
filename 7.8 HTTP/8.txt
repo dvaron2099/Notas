@@ -1,0 +1,25 @@
+Which HTTP header identifies the payload formar in a request?
+
+Accept
+Format
+Content-Type - correcta
+Minime-Type
+---------------------------------------------------------------------------
+Pregunta:
+¿Qué encabezado HTTP identifica el formato del contenido en una solicitud?
+1.	Accept
+2.	Format
+3.	Content-Type - correcta
+4.	Mime-Type
+---------------------------------------------------------------------------
+Respuesta correcta:
+Content-Type
+
+Explicación:
+El encabezado Content-Type es el que especifica el formato del contenido de la
+solicitud o la respuesta HTTP. Indica el tipo de medio de los datos enviados
+en el cuerpo de la solicitud (o respuesta), como por ejemplo application/json o text/html.
+
+•	Accept: Este encabezado se usa para indicar los tipos de contenido que el cliente está dispuesto a recibir, no el que está enviando.
+•	Format: Este encabezado no es estándar en HTTP.
+•	Mime-Type: Aunque se utiliza el término MIME (Multipurpose Internet Mail Extensions) para referirse a los tipos de medios, el encabezado correcto para especificar el tipo de contenido es Content-Type, no Mime-Type.

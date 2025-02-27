@@ -1,0 +1,6 @@
+API
+
+Application Programming Interfaces, se trata de un conjunto de
+definiciones y protocolos que se utiliza para desarrollar e integrar el
+software de las aplicaciones, permitiendo la comunicacion entre
+dos aplicaciones de software a traves de un conjunto de reglas.

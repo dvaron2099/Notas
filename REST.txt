@@ -1,0 +1,8 @@
+REST
+Representational state transfer
+REST es patron orientado a conectar sistemas basados en protocolo HTTP
+y nos sirve para obtener y generar datos y operaciones, devolviendo esos
+datos en formatos muy especificos, como xml y JSON.
+RET se apoya en HTTP, los verbos que utiliza son exactamente los mismos, con ellos
+se puede hacer un GET, POST, PUT, DELETE. Tambien devuelve respuesta http como 200 OK, 400 request
+y 500 internal error

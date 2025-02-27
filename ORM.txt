@@ -1,0 +1,8 @@
+ORM
+
+Object-relational mapping
+
+Un ORM es un modelo de programacion que permite mapear las estructuras
+de una base de datos relacional, sobre una estructura logica de entidades
+con el objetivo de simplificar y acelerar el desarrollo de nuestras
+aplicaciones.
