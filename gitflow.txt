@@ -1,0 +1,4 @@
+Gitflow
+Es un modelo de trabajo en GIT basado en ramas, en donde creamo un branch por
+cada historia de usuario, error (bug) o arreglo rapido (Hotfix) que tengamos
+que trabajar para luego crear el requerimiento hacia el flujo de ramas principal.

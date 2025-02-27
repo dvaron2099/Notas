@@ -1,0 +1,7 @@
+Arquitectura de microservicios
+
+La Arquitectura de microservicios se refiere a una tecnica que brinda a los
+desarrolladores modernos una forma de diseñar aplicaciones flexibles y altamente
+escalables al descomponer la apicacion en servicios pequeños con una unica responsabilidad
+especifica. Estos servicios, a los que a menudo se hace referencia como 'de estructura flexible',
+se pueden construir, implementar y adaptar de forma independiente.

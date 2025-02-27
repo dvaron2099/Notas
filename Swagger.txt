@@ -1,0 +1,9 @@
+Swagger
+Es una heramienta especial que compone automaticamente el RESTful API
+documento de su aplicacion.
+
+Su ventaja radica en que permite no solo consultar todos los endpoints
+de la aplicacion, si no tambien probarlos inmediatamente en accion enviando una
+peticion y recibiendo una respuesta.
+
+Swagger utiliza el estandar OpenApi

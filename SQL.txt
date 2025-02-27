@@ -1,0 +1,9 @@
+Cual es la diferencia entre una funcion y un procedimiento almacenado en SQL
+
+Los procedimientos almacenados son un conjunto de procedimientos o comandos
+almacenados en el servidor de bases de datos con un nombre. Hasta
+este punto la funciones son iguales pero estas, siempre deben retornar
+un valor escalar.
+
+Las funciones se usan para calculos puntuales, los procedimientos para ejecutar
+tareas complejas que incluyan comandos DML.

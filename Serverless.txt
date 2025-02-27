@@ -1,0 +1,8 @@
+Serverless
+
+Serverless es una solucion que permite crear y ejecutar aplicaciones con
+rapidez y menor costo total de propiedad, ya que no es necesario aprovisionar y
+administrar infraestructura. Usamos servidores para ejecutar las aplicaciones, pero el
+proovedor de nube se encarga de la administracion, entonces dejamos de
+preocuparnos por administrar servidores, sistemas operativos, software y dejamos
+recursos.

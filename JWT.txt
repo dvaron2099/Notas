@@ -1,0 +1,7 @@
+JWT
+
+Un JSON Web Token es un token de acceso estandarizado en el RCF7519 que
+permite el intercambio seguro de datos entre componentes o aplicaciones.
+Contiene toda la informacion importante sobre una entidad, lo que implica que
+no hace falta consultar una base de datos ni que la sesion tenga que guardarse
+en el servidor (Sesion sin estado)

@@ -1,0 +1,10 @@
+¿Para que sirve utilizar CORS en una API REST?
+
+Cross-Origin Resource sharing o en español intercambio de recursos de origen
+cruzado, es un mecanismo que nos permite verificar el origen desde donde viene
+la peticion de una aplicacion cuando vienen de diferente dominio.
+
+Permite configurar
+- Metodos
+- Encabezados
+- Origen
